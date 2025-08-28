@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/output.css">
+</head>
+<body class="min-h-screen bg-gray-950 font-light">
+    <header class="">
+        <div class="flex justify-between items-center px-12 md:px-32 py-5 md:py-12 w-full z-50 bg-gray-950 opacity-80 shadow-md">
+                <a href="./index.html"><img src="./1000821762.png" alt="MedicsLogo" class="h-8 md:h-20 w-12 md:w-36 rounded-md items-center"></a>
+            <div class="flex justify-evenly gap-2 md:gap-12 text-xs md:text-lg">
+                <a href="./index.html" class="text-white hover:text-red-600">Home</a>
+                <a href="./about.html" class="text-white hover:text-red-600">About</a>
+                <a href="./programs.html" class="text-white hover:text-red-600">Programs</a>
+                <a href="./dao.html" class="text-white hover:text-red-600">DAO Governance</a>
+                <a href="./donation.html" class="text-white hover:text-red-600">Donation</a>
+                <a href="./contact.html" class="text-white hover:text-red-600">Contact</a>
+            </div>
+        </div>
+    </header>
+    <!-- Donation Section  -->
+    <section id="donation" class="bg-[url(/10.jpg)] bg-cover bg-center h-screen py-8 md:py-16 text-sm">
+        <div class="max-w-5xl mx-auto px-6 mt-12">
+    <!-- Title -->
+        <h2 class="text-3xl md:text-4xl font-bold text-center text-red-600 mb-6 ">
+        Donate Blood, Save Lives</h2>
+    <p class="text-center text-white mb-10 font-semibold">
+        Register as a donor, and track your impact on the blockchain.</p>
+    <!-- Donation Card -->
+    <div class="shadow-lg bg-transparent rounded-2xl p-8">
+        <!-- Donor Form -->
+        <form id="donationForm" method="post" action="https://script.google.com/macros/s/AKfycbxxZmYwqr0Rnqf_sJnqZRkUtbsTUfq9rzHgu_5emsARf-33UxipXn_8z09qpeLwLNkc/exec" class="space-y-5">
+        <div>
+            <label class="block mb-1 text-white font-bold">Full Name</label>
+            <input name="Name" type="text" placeholder="Enter your full name" class="w-full px-4 py-3 rounded-xl text-gray-200 border-2 border-white focus:ring-2 focus:ring-red-400 font-semibold">
+        </div>
+        <div>
+            <label class="block mb-1 text-white font-bold">Blood Group</label>
+            <select name="BloodType" class="w-full px-4 py-3 rounded-xl border-2 text-gray-300 border-white focus:ring-2 focus:ring-red-400 font-semibold">
+            <option >A+</option>
+            <option >A-</option>
+            <option >B+</option>
+            <option >B-</option>
+            <option >AB+</option>
+            <option >AB-</option>
+            <option >O+</option>
+            <option >O-</option>
+        </select>
+        </div>
+        <div>
+            <label class="block mb-1 text-white font-bold">Location</label>
+            <input type="text" name="Location" placeholder="City, Country" class="w-full px-4 py-3 rounded-xl text-gray-200 border-2 border-white focus:ring-2 focus:ring-red-400 font-semibold"></div>
+        <a href="#"><button type="submit"
+            class="w-full bg-red-600 hover:bg-red-700 text-white py-3 px-5 rounded-full font-semibold transition">
+            🩸 Register as Donor
+        </button></a>
+        </form>
+    </div>
+    </div>
+</section>
+<!-- Popup Modal -->
+    <div id="modal" class="fixed inset-0 flex-col md:flex-row items-center justify-center bg-amber-100 bg-opacity-50 hidden"> 
+        <div class="bg-white rounded-lg shadow-lg w-96 p-6 text-center">
+            <h3 id="modalTitle" class="text-xl font-bold mb-2"></h3>
+            <p id="modalMessage" class="mb-4"></p>
+            <button onclick="closeModal()" class="bg-red-400 text-white px-4 py-2 rounded hover:bg-red-600 transition">OK</button>
+        </div>
+    </div>
+    <!-- Footer section -->
+    <footer class="text-gray-300 py-5 md:py-12 px-12 md:px-32 bg-gray-950">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+    <!-- Logo / About -->
+    <div>
+        <a href="./index.html"><img src="./1000821762.png" alt="MedicsLogo" class="h-8 md:h-20 w-12 md:w-36 rounded-md items-center"></a>
+        <h3 class="max-w-60  text-sm md:text-sm font-semibold mt-3 leading-tight animate-pulse">Decentralizing Community Led Healthcare Powered By Web3 For All.</h3>
+    </div>
+    <!-- Quick Links -->
+    <div>
+        <h3 class="text-lg font-semibold text-white mb-4">Quick Links</h3>
+        <ul class="space-y-2">
+        <li><a href="./about.html" class="hover:text-red-400">About</a></li>
+        <li><a href="./programs.html" class="hover:text-red-400">Programs</a></li>
+        <li><a href="./dao.html" class="hover:text-red-400">Dao Governance</a></li>
+        <li><a href="./donation.html" class="hover:text-red-400">Donation</a></li>
+        <li><a href="./contact.html" class="hover:text-red-400">Contact</a></li>
+        </ul>
+    </div>
+    <!-- Socials -->
+    <div>
+        <h3 class="text-lg font-semibold text-white mb-4">Follow Us</h3>
+        <div class="flex flex-wrap gap-4">
+        <a href="#" class="hover:text-red-400">🐦 Twitter</a>
+        <a href="#" class="hover:text-red-400">💬 Discord</a>
+        <a href="#" class="hover:text-red-400">📢 Telegram</a>
+        <a href="#" class="hover:text-red-400">🔗 LinkedIn</a>
+        </div>
+    </div>
+    </div>
+    <!-- Bottom Bar -->
+    <div class="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-500">
+        <p>© <span id="year"></span> Medics in Web3. Powered by Web3 for a healthier tomorrow.</p>
+    </div>
+</footer>
+
+<!-- <script src="./main.js"></script> -->
+</body>
+</html>

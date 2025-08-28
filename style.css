@@ -1,0 +1,33 @@
+/* DAO Gradient and animation */
+/* style.css */
+
+/* Gradient animation */
+@keyframes gradient-x {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Apply animation to gradient background */
+.animate-gradient-x {
+  background-size: 200% 200%;
+  animation: gradient-x 10s ease infinite;
+}
+
+/* Floating glow particles */
+@keyframes float {
+  0%   { transform: translateY(0) translateX(0); opacity: 0.6; }
+  50%  { transform: translateY(-20px) translateX(10px); opacity: 1; }
+  100% { transform: translateY(0) translateX(0); opacity: 0.6; }
+}
+.particle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.6);
+  animation: float 6s ease-in-out infinite;
+}
