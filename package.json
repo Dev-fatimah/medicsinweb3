@@ -1,6 +1,25 @@
 {
+  "name": "medicsinweb3",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Dev-fatimah/medicsinweb3#readme",
+  "bugs": {
+    "url": "https://github.com/Dev-fatimah/medicsinweb3/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dev-fatimah/medicsinweb3.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.12",
     "tailwindcss": "^4.1.12"
-  }
+  },
+  "devDependencies": {}
 }

@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./src/output.css">
 </head>
+
 <body class="min-h-screen bg-gray-950 font-light">
     <header class="">
-        <div class="flex justify-between items-center px-12 md:px-32 py-5 md:py-12 fixed top-0 w-full z-50 bg-gray-950 opacity-80 shadow-md">
-                <a href="./index.html"><img src="./1000821762.png" alt="MedicsLogo" class="h-8 md:h-20 w-12 md:w-36 rounded-md items-center"></a>
+        <div
+            class="flex justify-between items-center px-12 md:px-32 py-5 md:py-12 fixed top-0 w-full z-50 bg-gray-950 opacity-80 shadow-md">
+            <a href="./index.html"><img src="./1000821762.png" alt="MedicsLogo"
+                    class="h-8 md:h-20 w-12 md:w-36 rounded-md items-center"></a>
             <div class="flex justify-evenly gap-2 md:gap-12 text-xs md:text-lg">
                 <a href="./index.html" class="text-white hover:text-red-600">Home</a>
                 <a href="./about.html" class="text-white hover:text-red-600">About</a>
@@ -22,68 +26,131 @@
     </header>
     <!-- Contact section -->
     <section id="contact" class="px-12 md:px-32 py-8 md:py-16 bg-gray-800">
-    <div class="max-w-4xl mx-auto px-6">
-    <!-- Title -->
-        <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-6">Get In Touch</h2>
-        <p class="text-center text-white mb-10">Have questions or need support? We'd love to hear from you.</p>
-    <!-- Contact Card -->
-    <div class="bg-gray-50 shadow-lg shadow-red-100 rounded-2xl p-8">
-        <form class="space-y-5" method="post" action="https://script.google.com/macros/s/AKfycbw2H13lW9mgFUpuPncEW81PEKo27xF4U2pwt6Luw04TfuNX0_5biPyxMPTF-Vcn8SyG/exec">
-        <div>
-            <label class="block mb-1 text-gray-700 dark:text-gray-200">Your Name</label>
-            <input type="text" name="Name" placeholder="Enter your name" class="w-full px-4 py-3 rounded-xl border focus:ring-2 focus:ring-red-500 dark:bg-gray-700 dark:text-white"></div>
-        <div>
-            <label class="block mb-1 text-gray-700 dark:text-gray-200">Email Address</label>
-            <input type="email" name="Email" placeholder="you@example.com" class="w-full px-4 py-3 rounded-xl border focus:ring-2 focus:ring-red-500 dark:bg-gray-700 dark:text-white">
-        </div>
-        <div>
-            <label class="block mb-1 text-gray-700 dark:text-gray-200">Message</label>
-            <textarea rows="4" name="Message" placeholder="Write your message..." class="w-full px-4 py-3 rounded-xl border focus:ring-2 focus:ring-red-500 dark:bg-gray-700 dark:text-white"></textarea>
-        </div>
-        <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white py-3 px-5 rounded-xl font-semibold transition"> 📩 Send Message </button>
-        </form>
+        <div class="max-w-4xl mx-auto px-6">
+            <!-- Title -->
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-6">Get In Touch</h2>
+            <p class="text-center text-white mb-10">Have questions or need support? We'd love to hear from you.</p>
+            <!-- Contact Card -->
+            <div class="bg-gray-50 shadow-lg shadow-red-100 rounded-2xl p-8">
+                <form id="contactForm" class="space-y-5" method="POST"
+                    action="https://script.google.com/macros/s/AKfycbyoFX-28OLVLxjWPSbetRyJiSIMEfwXxx_XRNwHBNU4S59CMd7aInYepH0RA2KOBxxF/exec">
+                    <div>
+                        <label class="block mb-1 text-gray-700 dark:text-gray-200">Your Name</label>
+                        <input type="text" name="Name" placeholder="Enter your name" required
+                            class="w-full px-4 py-3 rounded-xl border focus:ring-2 focus:ring-red-500 dark:bg-gray-700 dark:text-white">
+                    </div>
+                    <div>
+                        <label class="block mb-1 text-gray-700 dark:text-gray-200">Email Address</label>
+                        <input type="email" name="Email" placeholder="you@example.com" required
+                            class="w-full px-4 py-3 rounded-xl border focus:ring-2 focus:ring-red-500 dark:bg-gray-700 dark:text-white">
+                    </div>
+                    <div>
+                        <label class="block mb-1 text-gray-700 dark:text-gray-200">Message</label>
+                        <textarea rows="4" name="Message" placeholder="Write your message..." required
+                            class="w-full px-4 py-3 rounded-xl border focus:ring-2 focus:ring-red-500 dark:bg-gray-700 dark:text-white"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-red-600 hover:bg-red-700 text-white py-3 px-5 rounded-xl font-semibold transition">
+                        📩 Send Message
+                    </button>
+                </form>
 
-        <!-- Contact Info -->
-        <div class="mt-8 text-center text-gray-600 dark:text-gray-300">
-        <p>📧 Email: <a href="mailto:medicsinweb3.0@gmail.com" class="text-red-600 dark:text-red-400">contact@medicsinweb3.org</a></p>
+                <!-- Contact Info -->
+                <div class="mt-8 text-center text-gray-600 dark:text-gray-300">
+                    <p>📧 Email: <a href="mailto:medicsinweb3.0@gmail.com"
+                            class="text-red-600 dark:text-red-400">contact@medicsinweb3.org</a></p>
+                </div>
+            </div>
         </div>
-    </div>
-    </div>
     </section>
-        <!-- Footer section -->
-    <footer class="text-gray-300 py-5 md:py-12 px-12 md:px-32 bg-gray-950">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-    <!-- Logo / About -->
-    <div>
-        <a href="./index.html"><img src="./1000821762.png" alt="MedicsLogo" class="h-8 md:h-20 w-12 md:w-36 rounded-md items-center"></a>
-        <h3 class="max-w-60  text-sm md:text-sm font-semibold mt-3 leading-tight animate-pulse">Decentralizing Community Led Healthcare Powered By Web3 For All.</h3>
-    </div>
-    <!-- Quick Links -->
-    <div>
-        <h3 class="text-lg font-semibold text-white mb-4">Quick Links</h3>
-        <ul class="space-y-2">
-        <li><a href="./about.html" class="hover:text-red-400">About</a></li>
-        <li><a href="./programs.html" class="hover:text-red-400">Programs</a></li>
-        <li><a href="./dao.html" class="hover:text-red-400">Dao Governance</a></li>
-        <li><a href="./donation.html" class="hover:text-red-400">Donation</a></li>
-        <li><a href="./contact.html" class="hover:text-red-400">Contact</a></li>
-        </ul>
-    </div>
-    <!-- Socials -->
-    <div>
-        <h3 class="text-lg font-semibold text-white mb-4">Follow Us</h3>
-        <div class="flex flex-wrap gap-4">
-        <a href="#" class="hover:text-red-400">🐦 Twitter</a>
-        <a href="#" class="hover:text-red-400">💬 Discord</a>
-        <a href="#" class="hover:text-red-400">📢 Telegram</a>
-        <a href="#" class="hover:text-red-400">🔗 LinkedIn</a>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="fixed inset-0 z-[100] bg-black/60 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-2xl p-6 w-full max-w-sm text-center shadow-xl">
+            <div class="text-4xl mb-2">✅</div>
+            <h3 class="text-xl font-semibold mb-2 text-gray-900">Message sent</h3>
+            <p class="text-gray-600 mb-6">Thanks! We’ll get back to you soon.</p>
+            <button id="closeModal"
+                class="bg-red-600 hover:bg-red-700 text-white px-5 py-2 rounded-xl font-medium">Close</button>
         </div>
     </div>
-    </div>
-    <!-- Bottom Bar -->
-    <div class="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-500">
-        <p>© <span id="year"></span> Medics in Web3. Powered by Web3 for a healthier tomorrow.</p>
-    </div>
-</footer>
+
+
+    <!-- Footer section -->
+    <footer class="text-gray-300 py-5 md:py-12 px-12 md:px-32 bg-gray-950">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Logo / About -->
+            <div>
+                <a href="./index.html"><img src="./1000821762.png" alt="MedicsLogo"
+                        class="h-8 md:h-20 w-12 md:w-36 rounded-md items-center"></a>
+                <h3 class="max-w-60  text-sm md:text-sm font-semibold mt-3 leading-tight animate-pulse">Decentralizing
+                    Community Led Healthcare Powered By Web3 For All.</h3>
+            </div>
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-lg font-semibold text-white mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="./about.html" class="hover:text-red-400">About</a></li>
+                    <li><a href="./programs.html" class="hover:text-red-400">Programs</a></li>
+                    <li><a href="./dao.html" class="hover:text-red-400">Dao Governance</a></li>
+                    <li><a href="./donation.html" class="hover:text-red-400">Donation</a></li>
+                    <li><a href="./contact.html" class="hover:text-red-400">Contact</a></li>
+                </ul>
+            </div>
+            <!-- Socials -->
+            <div>
+                <h3 class="text-lg font-semibold text-white mb-4">Follow Us</h3>
+                <div class="flex flex-wrap gap-4"></div>
+                <a href="#" class="hover:text-red-400">🐦 Twitter</a>
+                <a href="#" class="hover:text-red-400">💬 Discord</a>
+                <a href="#" class="hover:text-red-400">📢 Telegram</a>
+                <a href="#" class="hover:text-red-400">🔗 LinkedIn</a>
+            </div>
+        </div>
+        </div>
+        <!-- Bottom Bar -->
+        <div class="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-500">
+            <p>© <span id="year"></span> Medics in Web3. Powered by Web3 for a healthier tomorrow.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Modal helpers
+        const modal = document.getElementById('successModal');
+        const closeBtn = document.getElementById('closeModal');
+        const showModal = () => { modal.classList.remove('hidden'); modal.classList.add('flex'); };
+        const hideModal = () => { modal.classList.add('hidden'); modal.classList.remove('flex'); };
+        closeBtn.addEventListener('click', hideModal);
+        modal.addEventListener('click', (e) => { if (e.target === modal) hideModal(); });
+
+        // Async submit
+        const form = document.getElementById('contactForm');
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalLabel = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerText = 'Sending...';
+
+            try {
+                const res = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    mode: 'no-cors' // GAS often needs this; response is opaque
+                });
+                form.reset();
+                showModal();
+            } catch (err) {
+                alert('Sorry, something went wrong. Please try again.');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalLabel;
+            }
+        });
+
+        // Footer year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
+
 </html>
