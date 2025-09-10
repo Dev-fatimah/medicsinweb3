@@ -83,54 +83,66 @@
         </div>
         </div>
     </section>
+
+
     <!-- Donation Section  -->
     <section id="donation" class="bg-[url(/10.jpg)] bg-cover bg-center h-screen py-8 md:py-16 text-sm">
         <div class="max-w-5xl mx-auto px-6 mt-12">
-    <!-- Title -->
-        <h2 class="text-3xl md:text-4xl font-bold text-center text-red-600 mb-6 ">
-        Donate Blood, Save Lives</h2>
-    <p class="text-center text-white mb-10 font-semibold">
-        Register as a donor, and track your impact on the blockchain.</p>
-    <!-- Donation Card -->
-    <div class="shadow-lg bg-transparent rounded-2xl p-8">
-        <!-- Donor Form -->
-        <form id="donationForm" class="space-y-5">
-        <div>
-            <label class="block mb-1 text-white font-bold">Full Name</label>
-            <input type="text" placeholder="Enter your full name" class="w-full px-4 py-3 rounded-xl text-gray-200 border-2 border-white focus:ring-2 focus:ring-red-400 font-semibold">
+            <!-- Title -->
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-red-600 mb-6 ">
+                Donate Blood, Save Lives</h2>
+            <p class="text-center text-white mb-10 font-semibold">
+                Register as a donor, and track your impact on the blockchain.</p>
+            <!-- Donation Card -->
+            <div class="shadow-lg bg-transparent rounded-2xl p-8">
+                <!-- Donor Form -->
+                <form id="donationForm" method="POST"
+                    action="https://script.google.com/macros/s/AKfycbyLcWL81Gk4eI6dzhKYBlB8l3BR3OCbT_LoUi5j6amnhG94Zi4gDjSQWLHdzBHLNGI/exec"
+                    class="space-y-5">
+                    <div>
+                        <label class="block mb-1 text-white font-bold">Full Name</label>
+                        <input name="Name" type="text" placeholder="Enter your full name" required
+                            class="w-full px-4 py-3 rounded-xl text-gray-200 border-2 border-white focus:ring-2 focus:ring-red-400 font-semibold">
+                    </div>
+                    <div>
+                        <label class="block mb-1 text-white font-bold">Blood Group</label>
+                        <select name="Blood_Type" required
+                            class="w-full px-4 py-3 rounded-xl border-2 text-gray-300 border-white focus:ring-2 focus:ring-red-400 font-semibold">
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block mb-1 text-white font-bold">Location</label>
+                        <input type="text" name="Location" placeholder="City, Country" required
+                            class="w-full px-4 py-3 rounded-xl text-gray-200 border-2 border-white focus:ring-2 focus:ring-red-400 font-semibold">
+                    </div>
+                    <button id="donateSubmit" type="submit"
+                        class="w-full bg-red-600 hover:bg-red-700 text-white py-3 px-5 rounded-full font-semibold transition">
+                        🩸 Register as Donor
+                    </button>
+                </form>
+            </div>
         </div>
-        <div>
-            <label class="block mb-1 text-white font-bold">Blood Group</label>
-            <select class="w-full px-4 py-3 rounded-xl border-2 text-gray-300 border-white focus:ring-2 focus:ring-red-400 font-semibold">
-            <option >A+</option>
-            <option >A-</option>
-            <option >B+</option>
-            <option >B-</option>
-            <option >AB+</option>
-            <option >AB-</option>
-            <option >O+</option>
-            <option >O-</option>
-        </select>
-        </div>
-        <div>
-            <label class="block mb-1 text-white font-bold">Location</label>
-            <input type="text" placeholder="City, Country" class="w-full px-4 py-3 rounded-xl text-gray-200 border-2 border-white focus:ring-2 focus:ring-red-400 font-semibold"></div>
-        <a href="#"><button type="submit"
-            class="w-full bg-red-600 hover:bg-red-700 text-white py-3 px-5 rounded-full font-semibold transition">
-            🩸 Register as Donor
-        </button></a>
-        </form>
-    </div>
-    </div>
-</section>
-<!-- Popup Modal -->
-    <div id="modal" class="fixed inset-0 flex-col md:flex-row items-center justify-center bg-amber-100 bg-opacity-50 hidden"> 
+    </section>
+    <!-- Popup Modal -->
+    <div id="donationModal
+        class="fixed inset-0 flex-col md:flex-row items-center justify-center bg-amber-100 bg-opacity-50 hidden">
         <div class="bg-white rounded-lg shadow-lg w-96 p-6 text-center">
             <h3 id="modalTitle" class="text-xl font-bold mb-2"></h3>
             <p id="modalMessage" class="mb-4"></p>
-            <button onclick="closeModal()" class="bg-red-400 text-white px-4 py-2 rounded hover:bg-red-600 transition">OK</button>
+            <button onclick="closeModal()"
+                class="bg-red-400 text-white px-4 py-2 rounded hover:bg-red-600 transition">OK</button>
         </div>
     </div>
+
+
 <!-- DAO Section -->
         <section class="w-full px-16 md:px-32 py-8 md:py-12 grid md:grid-cols-2 gap-12 relative text-black bg-white">
         <!-- Left Content -->
@@ -180,41 +192,53 @@
     </section>
 
     <!-- Contact section -->
-    <section id="contactForm" class="px-12 md:px-32 py-8 md:py-16 bg-gray-800">
-    <div class="max-w-4xl mx-auto px-6">
-    <!-- Title -->
-        <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-6">Get In Touch</h2>
-        <p class="text-center text-white mb-10">Have questions or need support? We'd love to hear from you.</p>
-    <!-- Contact Card -->
-    <div class="bg-gray-50 shadow-lg shadow-red-100 rounded-2xl p-8">
-        <form class="space-y-5">
-        <div>
-            <label class="block mb-1 text-gray-700 dark:text-gray-200">Your Name</label>
-            <input type="text" placeholder="Enter your name" class="w-full px-4 py-3 rounded-xl border focus:ring-2 focus:ring-red-500 dark:bg-gray-700 dark:text-white"></div>
-        <div>
-            <label class="block mb-1 text-gray-700 dark:text-gray-200">Email Address</label>
-            <input type="email" placeholder="you@example.com" class="w-full px-4 py-3 rounded-xl border focus:ring-2 focus:ring-red-500 dark:bg-gray-700 dark:text-white">
-        </div>
-        <div>
-            <label class="block mb-1 text-gray-700 dark:text-gray-200">Message</label>
-            <textarea rows="4" placeholder="Write your message..." class="w-full px-4 py-3 rounded-xl border focus:ring-2 focus:ring-red-500 dark:bg-gray-700 dark:text-white"></textarea>
-        </div>
-        <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white py-3 px-5 rounded-xl font-semibold transition"> 📩 Send Message </button>
-        </form>
+    <section id="contact" class="px-12 md:px-32 py-8 md:py-16 bg-gray-800">
+        <div class="max-w-4xl mx-auto px-6">
+            <!-- Title -->
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-6">Get In Touch</h2>
+            <p class="text-center text-white mb-10">Have questions or need support? We'd love to hear from you.</p>
+            <!-- Contact Card -->
+            <div class="bg-gray-50 shadow-lg shadow-red-100 rounded-2xl p-8">
+                <form id="contactForm" class="space-y-5" method="POST"
+                    action="https://script.google.com/macros/s/AKfycbyoFX-28OLVLxjWPSbetRyJiSIMEfwXxx_XRNwHBNU4S59CMd7aInYepH0RA2KOBxxF/exec">
+                    <div>
+                        <label class="block mb-1 text-gray-700 dark:text-gray-200">Your Name</label>
+                        <input type="text" name="Name" placeholder="Enter your name" required
+                            class="w-full px-4 py-3 rounded-xl border focus:ring-2 focus:ring-red-500 dark:bg-gray-700 dark:text-white">
+                    </div>
+                    <div>
+                        <label class="block mb-1 text-gray-700 dark:text-gray-200">Email Address</label>
+                        <input type="email" name="Email" placeholder="you@example.com" required
+                            class="w-full px-4 py-3 rounded-xl border focus:ring-2 focus:ring-red-500 dark:bg-gray-700 dark:text-white">
+                    </div>
+                    <div>
+                        <label class="block mb-1 text-gray-700 dark:text-gray-200">Message</label>
+                        <textarea rows="4" name="Message" placeholder="Write your message..." required
+                            class="w-full px-4 py-3 rounded-xl border focus:ring-2 focus:ring-red-500 dark:bg-gray-700 dark:text-white"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-red-600 hover:bg-red-700 text-white py-3 px-5 rounded-xl font-semibold transition">
+                        📩 Send Message
+                    </button>
+                </form>
 
-        <!-- Contact Info -->
-        <div class="mt-8 text-center text-gray-600 dark:text-gray-300">
-        <p>📧 Email: <a href="mailto:medicsinweb3.0@gmail.com" class="text-red-600 dark:text-red-400">contact@medicsinweb3.org</a></p>
+                <!-- Contact Info -->
+                <div class="mt-8 text-center text-gray-600 dark:text-gray-300">
+                    <p>📧 Email: <a href="mailto:medicsinweb3.0@gmail.com"
+                            class="text-red-600 dark:text-red-400">contact@medicsinweb3.org</a></p>
+                </div>
+            </div>
         </div>
-    </div>
-    </div>
     </section>
-    <!-- Popup Modal -->
-    <div id="modal" class="fixed inset-0 flex-col md:flex-row items-center justify-center bg-amber-100 bg-opacity-50 hidden"> 
-        <div class="bg-white rounded-lg shadow-lg w-96 p-6 text-center">
-            <h3 id="modalTitle" class="text-xl font-bold mb-2"></h3>
-            <p id="modalMessage" class="mb-4"></p>
-            <button onclick="closeModal()" class="bg-red-400 text-white px-4 py-2 rounded hover:bg-red-600 transition">OK</button>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="fixed inset-0 z-[100] bg-black/60 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-2xl p-6 w-full max-w-sm text-center shadow-xl">
+            <div class="text-4xl mb-2">✅</div>
+            <h3 class="text-xl font-semibold mb-2 text-gray-900">Message sent</h3>
+            <p class="text-gray-600 mb-6">Thanks! We’ll get back to you soon.</p>
+            <button id="closeModal"
+                class="bg-red-600 hover:bg-red-700 text-white px-5 py-2 rounded-xl font-medium">Close</button>
         </div>
     </div>
 
@@ -253,5 +277,89 @@
         <p>© <span id="year"></span> Medics in Web3. Powered by Web3 for a healthier tomorrow.</p>
     </div>
 </footer>
+
+<!-- Donation script  -->
+    <script>
+        // Donation form async submit + modal handling
+        const donationForm = document.getElementById('donationForm');
+        const donationModal = document.getElementById('modal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalMessage = document.getElementById('modalMessage');
+
+        function openModal(title, message) {
+            modalTitle.textContent = title;
+            modalMessage.textContent = message;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+        function closeModal() {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+        window.closeModal = closeModal;
+
+        if (donationForm) {
+            donationForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const submitBtn = donationForm.querySelector('button[type="submit"]');
+                const original = submitBtn.innerHTML;
+                submitBtn.disabled = true;
+                submitBtn.innerText = 'Submitting...';
+                try {
+                    await fetch(donationForm.action, {
+                        method: 'POST',
+                        body: new FormData(donationForm),
+                        mode: 'no-cors'
+                    });
+                    donationForm.reset();
+                    openModal('Registration successful', 'Thank you for registering as a donor. We will contact you soon.');
+                } catch (err) {
+                    openModal('Submission failed', 'Something went wrong. Please try again.');
+                } finally {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = original;
+                }
+            });
+        }
+    </script>
+
+    <!-- Contact script -->
+    <script>
+        // Modal helpers
+        const modal = document.getElementById('successModal');
+        const closeBtn = document.getElementById('closeModal');
+        const showModal = () => { modal.classList.remove('hidden'); modal.classList.add('flex'); };
+        const hideModal = () => { modal.classList.add('hidden'); modal.classList.remove('flex'); };
+        closeBtn.addEventListener('click', hideModal);
+        modal.addEventListener('click', (e) => { if (e.target === modal) hideModal(); });
+
+        // Async submit
+        const form = document.getElementById('contactForm');
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalLabel = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerText = 'Sending...';
+
+            try {
+                const res = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    mode: 'no-cors' // GAS often needs this; response is opaque
+                });
+                form.reset();
+                showModal();
+            } catch (err) {
+                alert('Sorry, something went wrong. Please try again.');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalLabel;
+            }
+        });
+
+        // Footer year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
